@@ -18,14 +18,14 @@
         <button class="menu-btn" id="save-btn">Save to OS</button>
         <button class="menu-btn" id="clear-btn">Clear Workspace</button>
     </div>
-    <textarea id="note-text" placeholder="Start typing details here..."></textarea>
+    <textarea id="note-text" placeholder="Start typingyour stuff here..."></textarea>
 </div>
 <script>
     const txt = document.getElementById('note-text');
     txt.value = localStorage.getItem('shahadah_note') || '';
     document.getElementById('save-btn').addEventListener('click', () => {
         localStorage.setItem('shahadah_note', txt.value);
-        alert('Saved successfully!');
+        alert('Saved successfully! LocalStorage');
     });
     document.getElementById('clear-btn').addEventListener('click', () => {
         txt.value = '';
